@@ -8,7 +8,7 @@
 
 ### 1.1 Proposition de valeur
 - **Mission principale** : Rendre le jardinage/potager facile pour tout le monde, même sans expérience.
-- **Promesse utilisateur** : Simplifier via une interface ergonomique la découverte/gestion du potager.
+- **Promesse utilisateur** : Simplifier via une interface ergonomique la découverte/gestion de son potager.
 - **Différenciation** : Assistant interactif générant des itinéraires personnalisés.
 
 > **Décision MVP** : L'assistant interactif est la fonctionnalité cœur du MVP ([voir vision-goals.md](vision-goals.md)).
@@ -113,4 +113,4 @@
 > - [vision-goals.md](vision-goals.md) (vision, non-objectifs, indicateurs)
 > - [features.md](features.md) (fonctionnalités détaillées)
 > - [user-stories.md](user-stories.md) (user stories priorisées)
-> - [docs/wireframes.md](docs/wireframes.md) (wireframes textuels)
+> - [docs/wireframes.md](wireframes.md) (wireframes textuels)
