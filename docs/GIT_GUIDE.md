@@ -1,30 +1,30 @@
 # Guide Git & GitHub pour le projet `bhvr` 🦫
 
-> **Ce guide vous accompagne pour adopter une méthodologie professionnelle avec Git et GitHub sur ce monorepo TypeScript.**
+> **Notes pour adopter une méthodologie professionnelle avec Git et GitHub sur ce monorepo TypeScript.**
 
 ---
 
 ## 🚦 Workflow Git Professionnel
 
 1. **Fork & Clone** :
-   - Forkez le repo sur GitHub si besoin, puis clonez-le :
+   - Forker le repo sur GitHub si besoin, puis le cloner :
      ```bash
      git clone https://github.com/<votre-utilisateur>/bhvr.git
      cd bhvr
      ```
 2. **Branche dédiée** :
-   - Créez une branche pour chaque fonctionnalité/correctif :
+   - Créer une branche pour chaque fonctionnalité/correctif :
      ```bash
      git checkout -b feat/ma-fonctionnalite
      ```
 3. **Commits atomiques** :
-   - Faites des commits petits, clairs et fréquents.
+   - Faire des commits petits, clairs et fréquents.
 4. **Push & Pull Request** :
-   - Poussez votre branche et ouvrez une Pull Request (PR) sur GitHub.
+   - Pousser la branche et ouvrir une Pull Request (PR) sur GitHub.
 5. **Code Review** :
-   - Demandez une revue, répondez aux commentaires, puis mergez après validation.
+   - "Demander une review", commentaires, puis "merger"/fusionner après validation.
 6. **Mise à jour régulière** :
-   - Gardez votre branche à jour avec `main` :
+   - Garder la branche à jour avec `main` :
      ```bash
      git fetch origin
      git rebase origin/main
@@ -55,7 +55,7 @@
 
 ## 📝 Types de messages de commit (Conventional Commits)
 
-Adoptez le format [Conventional Commits](https://www.conventionalcommits.org/) :
+Adopter le format [Conventional Commits](https://www.conventionalcommits.org/) :
 
 ```
 <type>[optional scope]: <description>
@@ -89,25 +89,25 @@ Adoptez le format [Conventional Commits](https://www.conventionalcommits.org/) :
 - `fix/xxx` : correctif
 - `docs/xxx` : documentation
 
-> **Astuce** : Préfixez vos branches pour plus de clarté !
+> **Note** : Préfixer les branches pour plus de clarté !
 
 ---
 
 ## ✅ Bonnes pratiques
 
-- **Un commit = une idée** : évitez les commits fourre-tout.
+- **Un commit = une idée** : éviter les commits fourre-tout.
 - **Messages clairs** : explicites, en anglais ou français cohérent.
-- **Relisez vos PRs** avant de demander une review.
+- **Relire les PRs** avant la review ?
 - **Pas de code mort** ou de secrets dans le repo !
-- **Utilisez `.gitignore`** pour éviter de versionner les fichiers sensibles ou inutiles.
+- **Utiliser `.gitignore`** pour éviter de versionner les fichiers sensibles ou inutiles.
 
 ---
 
-## 🛠️ Outils recommandés
+## 🛠️ Outils
 
-- [GitHub Desktop](https://desktop.github.com/) : interface graphique simple
-- [GitKraken](https://www.gitkraken.com/) : gestion avancée des branches
-- [VSCode GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) : historique et blame dans VSCode
+- ?? [GitHub Desktop](https://desktop.github.com/) : interface graphique simple ??
+- ?? [GitKraken](https://www.gitkraken.com/) : gestion avancée des branches ??
+- ?? [VSCode GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) : historique ... dans VSCode
 
 ---
 
