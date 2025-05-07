@@ -6,11 +6,11 @@ const app = new Hono()
 
 app.use(cors())
 
-app.get('/', (c) => {
+const routes = app.get('/', (c) => {
   return c.text('Hello Hono!')
 })
 
-app.get('/hello', async (c) => {
+.get('/hello', async (c) => {
 
   const data: ApiResponse = {
     message: "Hello BHVR!",
@@ -20,4 +20,5 @@ app.get('/hello', async (c) => {
   return c.json(data, { status: 200 })
 })
 
+export type AppType = typeof routes
 export default app

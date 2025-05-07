@@ -1,18 +1,27 @@
 import { useState } from 'react'
 import beaver from './assets/beaver.svg'
-import { ApiResponse } from 'shared'
 import { Button } from './components/ui/button'
+import type { AppType } from 'server'
+import { hc } from 'hono/client'
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:3000"
 
+const client = hc<AppType>(SERVER_URL);
+
+type ResponseType = Awaited<ReturnType<typeof client.hello.$get>>;
+
 function App() {
-  const [data, setData] = useState<ApiResponse | undefined>()
+  const [data, setData] = useState<Awaited<ReturnType<ResponseType["json"]>> | undefined>()
 
   async function sendRequest() {
     try {
-      const req = await fetch(`${SERVER_URL}/hello`)
-      const res: ApiResponse = await req.json()
-      setData(res)
+      const res = await client.hello.$get()
+      if (!res.ok) {
+        console.log("Error fetching data")
+        return
+      }
+      const data = await res.json()
+      setData(data)
     } catch (error) {
       console.log(error)
     }
